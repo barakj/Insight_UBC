@@ -1,0 +1,20 @@
+private test suite:   100%          
+                    
+   Npm run cover:   Statements   : 95.04% ( 748/787 )
+                    Branches     : 94.09% ( 223/237 )
+                    Functions    : 88.68% ( 94/106 )
+                    Lines        : 95.04% ( 747/786 )
+
+ Most of my individual contribution was with parsing html, and changing the QueryController to identify when querying multiple datasets.
+ 
+ We worked together for almost all of d3, through meetings, codeshare and skype, so we both got to work on pretty much everything. 
+ Most of the commits are from Elad's account because my computer doesnt really work..
+ 
+ Key commits:
+ 
+ fix duplicates on multiple PUT calls
+ https://github.com/CS310-2016Fall/cpsc310project_team44/commit/b5d40c1a929c72a67f33b65858d38f3aa4813832
+ 
+ fix 400
+ https://github.com/CS310-2016Fall/cpsc310project_team44/commit/611fc065e8adbfce594461493bd537f72e023a7d
+ 

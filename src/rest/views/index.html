@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./public/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3eH8F1A98PasOs8deI9srCHs8E6T0mow" async defer></script>
+    <script src="./public/jquery.min.js"></script>
+    <script src="./public/rooms.js"></script>
+    <script src="./public/courses.js"></script>
+    <script src="./public/routes.js"></script>
+    <script src="./public/scheduling.js"></script>
+    <script src="./public/main.js"></script>
+    <script src="./public/d3.min.js"></script>
+
+
+</head>
+<html>
+    <body>
+    <div id="header">
+    <input type="file" id="datasetZip">
+    <button type="button" id="datasetAdd">Add Dataset</button>
+    <div class="container2">
+        <img id="logo" src="./public/insightUBC.png">
+    </div>
+        <nav>
+            <div class="container2">
+            <ul>
+                <li ><a id="courses" href="./public/partial/courses.html">Courses</a></li>
+                <li><a id="rooms" href="./public/partial/rooms.html">Rooms</a></li>
+                <li><a id="scheduling" href="./public/partial/scheduling.html">Scheduling</a></li>
+                <li><a id="routes" class="last" href="./public/partial/routes.html">Routes</a></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+    </div>
+    <div id="container">
+        <!-- placeholder -->
+        <form id="query">
+        <div id="main">
+
+        </div>
+        </form>
+        <div id="map"></div>
+    </div>
+
+
+
+
+    <script>
+
+        //need to add lat lons from query
+        var neighborhoods = [];
+
+
+        function setNeighborhood(arr) {
+            neighborhoods = arr;
+        }
+
+
+        var markers = [];
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 49.259389, lng: -123.247346},
+                zoom: 15
+            });
+        }
+
+        function drop() {
+            console.log("done");
+            clearMarkers();
+            for (var i = 0; i < neighborhoods.length; i++) {
+                console.log("hey");
+                addMarkerWithTimeout(neighborhoods[i]["location"], i * 150, "<b>" + neighborhoods[i]["room"] + "</b><hr>" + neighborhoods[i]["courses"]);
+            }
+
+
+        }
+
+
+
+        function addMarkerWithTimeout(position, timeout,title) {
+            var myMarker = new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: title
+            });
+            myMarker.addListener('click', function() {
+                infowindow.open(map, myMarker);
+            });
+            window.setTimeout(function() {
+                markers.push(myMarker);
+            }, timeout);
+
+        }
+
+
+        function clearMarkers() {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+        }
+
+
+    </script>
+    </body>
+
+</html>

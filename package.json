@@ -1,0 +1,41 @@
+{
+  "name": "cpsc310project",
+  "description": "CPSC 310 project",
+  "homepage": "https://github.com/ubccpsc/310",
+  "author": "",
+  "contributors": "N/A",
+  "license": "GPL-3.0",
+  "repository": "N/A",
+  "bugs": "",
+  "keywords": [],
+  "version": "0.0.1",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "icedfrisby": "^0.2.4",
+    "istanbul": "^0.4.4",
+    "istanbul-harmony": "^0.3.16",
+    "joi": "^8.4.2",
+    "mocha": "^2.5.3",
+    "typescript": "^1.8.7",
+    "typings": "^1.3.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./typings/; rm -rf ./node_modules/;",
+    "cleanwin": "rmdir typings /s /q & rmdir node_modules /s /q & exit 0",
+    "configure": "npm install & typings install --global;",
+    "configurewin": "npm install & typings install --global",
+    "build": "tsc",
+    "test": "mocha -c -R mochawesome",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+    "coverwin": "istanbul cover node_modules/mocha/bin/_mocha",
+    "start": "node src/App.js"
+  },
+  "dependencies": {
+    "jszip": "^3.1.2",
+    "mochawesome": "^1.5.2",
+    "parse5": "^2.2.3",
+    "restify": "^4.0.3",
+    "tslint": "^3.15.1",
+    "typescript": "^1.8.10"
+  }
+}

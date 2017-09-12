@@ -1,0 +1,36 @@
+<h2>Scheduling</h2>
+<p class="pageDescrip">Schedule courses and rooms based on the properties below</p>
+
+<div class="data-property">
+    <label>Department: </label>
+    <input id="courseDept1" name="courses_dept" type="text">
+    <input type="button" id="addDept1" value="+">
+    <div id="selectedDepts"></div>
+</div>
+<div class="data-property">
+    <label>Course Number: </label>
+    <input id="courseNumber1" name="courses_id" type="number">
+    <input type="button" id="addCourseNumber1" value="+">
+    <div id="selectedCourseNumbers"></div>
+</div>
+
+
+<div class="data-property">
+    <label>Building Name: </label>
+    <input id="buildingName1" name="rooms_shortname" type="text">
+    <input type="button" id="addBuildingName1" value="+">
+    <div id="selectedBuildingNames"></div>
+
+</div>
+
+<div class="data-property" id="last-property">
+    <label>Within Distance(m): </label>
+    <input id="radius" type="number" placeholder="e.g. 50">
+    <label>From: </label>
+    <input id="from" type="text" placeholder="e.g. CHEM">
+</div>
+
+<button type="submit">Submit</button>
+
+<!-- render placeholder -->
+<div id="render"></div>

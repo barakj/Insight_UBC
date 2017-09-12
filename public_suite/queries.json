@@ -1,0 +1,76 @@
+[
+	{
+		"id" : "q0",
+		"title" : "Should be able to find sections with an average > 90",
+		"query" : {
+			"GET": ["courses_dept", "courses_avg"],
+			"WHERE" : {
+				"GT" : {"courses_avg" : 90}
+			},
+			"ORDER" : "courses_avg",
+			"AS" : "TABLE"
+		},
+		"expected-status" : 200,
+		"expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+		"expected-json" : "q0.json"
+	},
+	{
+		"id" : "q1",
+		"title" : "Should be able to find sections with an average > 70 and in the adhe department, or with a 90 average in any department",
+		"query" : {
+			"GET": ["courses_dept", "courses_id", "courses_avg"],
+			"WHERE": {
+				"OR": [
+					{"AND": [
+						{"GT": {"courses_avg": 70}},
+						{"IS": {"courses_dept": "adhe"}}
+					]},
+					{"EQ": {"courses_avg": 90}}
+				]
+			},
+			"ORDER": "courses_avg",
+			"AS": "TABLE"
+		},
+		"expected-status" : 200,
+		"expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+		"expected-json" : "q1.json"
+	},
+	{
+		"id" : "q2",
+		"title" : "Should be able to find sections of CPSC 310",
+		"query" : {
+			"GET": ["courses_dept", "courses_id", "courses_avg"],
+			"WHERE": {
+				"AND": [
+					{"IS": {"courses_dept": "cpsc"}},
+					{"EQ": {"courses_id": "310"}}
+				]
+			},
+			"AS": "TABLE"
+		},
+		"expected-status" : 200,
+		"expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+		"expected-json" : "q2.json"
+	},
+	{
+		"id" : "q3",
+		"title" : "Should be able to find sections in CP* with average > 70 AND are not taught by Murphy, Gail OR any courses taught by Gregor",
+		"query" : {
+			"GET": ["courses_dept", "courses_id", "courses_instructor"],
+			"WHERE": {
+				"OR": [
+					{"AND": [
+						{"GT": {"courses_avg": 70}},
+						{"IS": {"courses_dept": "cp*"}},
+						{"NOT": {"IS": {"courses_instructor": "murphy, gail"}}}
+					]},
+					{"IS": {"courses_instructor": "*gregor*"}}
+				]
+			},
+			"AS": "TABLE"
+		},
+		"expected-status" : 200,
+		"expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+		"expected-json" : "q3.json"
+	}
+]

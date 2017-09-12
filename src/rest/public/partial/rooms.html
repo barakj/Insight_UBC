@@ -1,0 +1,67 @@
+
+    <h2>Rooms</h2>
+    <p class="pageDescrip">Search for rooms based on the properties below</p>
+
+        <div class="data-property">
+            <label>Building Name: </label>
+            <input id="buildingName" name="rooms_shortname" type="text">
+        </div>
+
+        <div class="data-property">
+            <label>Room number: </label>
+            <input id="roomNumber" name="rooms_number" type="number">
+        </div>
+
+        <div class="data-property">
+            <label>Room size: </label>
+            <select id="roomSizeOperator">
+                <option value ="EQ">Equal to</option>
+                <option value ="GT">Greater than</option>
+                <option value ="LT">Less than</option>
+            </select>
+            <input id="roomSize" name="rooms_seats" type="number">
+        </div>
+
+        <div class="data-property">
+            <label>Room type: </label>
+            <select id="roomType" name="rooms_type">
+                <option value ="Any">ANY</option>
+                <option value ="Case Style">Case Style</option>
+                <option value ="Small Group">Small Group</option>
+                <option value ="Tiered Large Group">Tiered Large Group</option>
+                <option value ="Open Design General Purpose">Open Design General Purpose</option>
+                <option value ="TBD">TBD</option>
+                <option value ="Active Learning">Active Learning</option>
+                <option value ="Studio Lab">Studio Lab</option>
+
+            </select>
+        </div>
+
+        <div class="data-property">
+            <label>Room furniture: </label>
+            <select id="roomFurniture" name="rooms_furniture">
+                <option value ="Any">ANY</option>
+                <option value ="Classroom-Fixed Tables/Movable Chairs">Classroom-Fixed Tables/Movable Chairs</option>
+                <option value ="Classroom-Movable Tables & Chairs">Classroom-Movable Tables & Chairs</option>
+                <option value ="Classroom-Fixed Tablets">Classroom-Fixed Tablets</option>
+                <option value ="Classroom-Fixed Tables/Fixed Chairs"> Classroom-Fixed Tables/Fixed Chairs</option>
+                <option value ="Classroom-Fixed Tables/Moveable Chairs">Classroom-Fixed Tables/Moveable Chairs</option>
+                <option value ="Classroom-Hybrid Furniture">Classroom-Hybrid Furniture</option>
+                <option value ="Classroom-Learn Lab">Classroom-Learn Lab</option>
+                <option value ="Classroom-Movable Tablets">Classroom-Movable Tablets</option>
+                <option value ="Classroom-Moveable Tables & Chairs">Classroom-Moveable Tables & Chairs</option>
+                <option value ="Classroom-Moveable Tablets">Classroom-Moveable Tablets</option>
+            </select>
+        </div>
+
+        <div class="data-property" id="last-property">
+            <label>Within Distance(m): </label>
+            <input id="radius" type="number" placeholder="e.g. 50">
+            <label>From: </label>
+            <input id="from" type="text" placeholder="e.g. CHEM">
+        </div>
+
+        <button type="submit">Submit</button>
+
+    <!-- render placeholder -->
+    <div id="render"></div>

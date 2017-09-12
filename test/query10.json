@@ -1,0 +1,31 @@
+[
+  {
+    "id" : "q8",
+    "title" : "Should be able to find rooms",
+    "query" : {
+      "GET": ["rooms_shortname", "numRooms"],
+      "WHERE": {"GT": {"rooms_seats": 160}},
+      "GROUP": [ "rooms_shortname" ],
+      "APPLY": [ {"numRooms": {"COUNT": "rooms_name"}} ],
+      "AS": "TABLE"
+    },
+    "expected-status" : 200,
+    "expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+    "expected-json" : "query8.json"
+  },
+
+  {
+    "id" : "q8",
+    "title" : "Should be able to find rooms",
+    "query" : {
+      "GET": ["rooms_shortname", "numRooms"],
+      "WHERE": {"GT": {"rooms_seats": 160}},
+      "GROUP": [ "rooms_shortname" ],
+      "APPLY": [ {"numRooms": {"COUNT": "rooms_name"}} ],
+      "AS": "TABLE"
+    },
+    "expected-status" : 200,
+    "expected-json-types" : "{\"result\": \"Joi.array()\", \"render\" : \"Joi.string()\"}",
+    "expected-json" : "query8.json"
+  }
+ ]

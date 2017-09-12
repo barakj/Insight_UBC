@@ -1,0 +1,12 @@
+{ "render": "TABLE",
+  "result":
+  [ { "rooms_fullname": "Hugh Dempster Pavilion",
+    "rooms_number": "101" },
+    { "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_number": "110" },
+    { "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_number": "201" },
+    { "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_number": "301" },
+    { "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_number": "310" } ] }

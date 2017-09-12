@@ -1,0 +1,20 @@
+private test suite:   100%          
+                    
+   Npm run cover:   Statements   : 95.04% ( 748/787 )
+                    Branches     : 94.09% ( 223/237 )
+                    Functions    : 88.68% ( 94/106 )
+                    Lines        : 95.04% ( 747/786 )
+
+ Most of my individual contribution was with parsing html, and doing lat lon.
+ 
+ We worked together for almost all of d3, through meetings, codeshare and skype, so we both got to work on pretty much everything. 
+ Most of the commits are from Elad's account because my computer doesnt really work..
+ 
+ Key commits:
+ 
+async problem solved!
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/b7e777056ac2134215cd1a781f0df614b5a1c3eb
+ 
+Parsing all information correctly except for lat/lon
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/5b06c88c0e080c6406fbe6a48a547b18cc5ab217
+ 

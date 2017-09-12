@@ -1,0 +1,24 @@
+private test suite:   100%
+
+Npm run cover:        97.35%  statements
+                      95.43%  branches
+                      95.71%  functions
+                      97.35%  lines
+
+
+Most of my individual contribution was on the extension and testing of the query, altough we did most of the project together.
+
+FYI, We worked together on my computer for most of the project, which is why most commits are from my account.
+
+
+Key commits:
+
+Average, Min, Max, Count:                      
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/8ffb549cfe42f711a97602564bea6b08ab8f8ebd
+               
+Group using map:
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/e5927623d0bf1f9ae5f8309cc43fc06f213be276
+
+Tests:
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/a5e4764edf699a02398bac9ab193b43ced152c63
+                

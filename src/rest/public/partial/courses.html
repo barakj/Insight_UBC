@@ -1,0 +1,83 @@
+<h2>Courses</h2>
+<p class="pageDescrip">Search for courses based on the properties below</p>
+
+<div class="data-property">
+    <fieldset id="showByFieldSet">
+        <input id="showBySection" name="showBy" type="radio" checked="checked">
+        <label>Show by sections</label>
+        <input id="showByCourse" name="showBy" type="radio">
+        <label>Show by courses</label>
+    </fieldset>
+
+</div>
+
+<div class="data-property">
+    <label>Size: </label>
+    <select id="sectionSizeOperator">
+        <option value ="EQ">Equal to</option>
+        <option value ="GT">Greater than</option>
+        <option value ="LT">Less than</option>
+    </select>
+    <input id="sectionSize" name="courses_size" type="number">
+</div>
+
+<div class="data-property">
+    <label>Department: </label>
+    <input id="courseDept" name="courses_dept" type="text">
+    <input type="button" id="addDept" value="+">
+    <div id="selectedDepts"></div>
+</div>
+<div class="data-property">
+    <label>Course Number: </label>
+    <input id="courseNumber" name="courses_id" type="number">
+    <input type="button" id="addCourseNumber" value="+">
+    <div id="selectedCourseNumbers"></div>
+</div>
+
+<div class="data-property">
+    <label>Instructor: </label>
+    <input id="courseInstructor" name="courses_instructor" type="text">
+    <input type="button" id="addInst" value="+">
+    <div id="selectedInsts"></div>
+</div>
+
+<div class="data-property">
+    <label>Course Title: </label>
+    <input id="courseTitle" name="courses_title" type="text">
+    <input type="button" id="addTitle" value="+">
+    <div id="selectedTitles"></div>
+</div>
+
+<div class="data-property">
+    <fieldset>
+        <label>Average: </label>
+        <input id="lowestAVG" name="avg" type="radio">
+        <label>Lowest</label>
+        <input id="highestAVG" name="avg" type="radio">
+        <label>Highest</label>
+    </fieldset>
+
+</div>
+
+<div class="data-property">
+    <fieldset>
+        <label>Pass/Fail</label>
+        <input id="mostPass" name="pass-fail" type="radio">
+        <label>Most passes</label>
+        <input id="mostFail" name="pass-fail" type="radio">
+        <label>Most fails</label>
+    </fieldset>
+
+</div>
+
+<div class="data-property">
+    <label>Most sections:  </label>
+    <input type="checkbox" name="mostSecs" id="mostSections">
+</div>
+
+
+
+<button type="submit">Submit</button>
+
+<!-- render placeholder -->
+<div id="render"></div>

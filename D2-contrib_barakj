@@ -1,0 +1,25 @@
+private test suite:   100%
+
+ Npm run cover:        97.35%  statements
+                       95.43%  branches
+                       95.71%  functions
+                       97.35%  lines
+ 
+ 
+ Most of my individual contribution was with creating the InsightFacade class, creating tests and working on queryController with Elad.
+ 
+ We worked together for almost all of d2, through meetings, codeshare and skype, so we both got to work on pretty much everything. 
+ Most of the commits are from Elad's account because my computer doesnt really work..
+
+ 
+Key commits:
+ 
+Started Insight Facade                      
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/5cbe64cd305fe9686b9ed7fa8fd3a8f7ce2d69dd
+                
+Trying to fix AVG, added more tests:
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/4b9607f67baa26182b6b3206838987fafeb22a8f
+ 
+Tests:
+https://github.com/CS310-2016Fall/cpsc310project_team44/commit/a5e4764edf699a02398bac9ab193b43ced152c63
+ 

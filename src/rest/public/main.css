@@ -1,0 +1,15 @@
+/* Styling index.html */
+
+div#container {
+    margin: auto;
+    width: 980px;
+    background-color: #000;
+}
+
+h1 {
+    color: #f00;
+}
+
+.header {
+
+}
